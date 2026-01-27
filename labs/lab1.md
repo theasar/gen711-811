@@ -1,14 +1,13 @@
 ## Lab 1 (take home lab, 01/27/25)
 
-**Step 1.** Download and install Visual Studio Code (VScode) from [here](https://code.visualstudio.com/Download) 
-**Step 2.** Open VScode to install these extension from the Visual Studio Marketplace:
-    **Remote - SSH**  
-  
+**Step 1. Download and install Visual Studio Code (VScode) from [here](https://code.visualstudio.com/Download)** 
+**Step 2. Open VScode to install the **Remote SSH** extension from the Visual Studio Marketplace:**
   1. Open up vscode and click the 'building blocks' icon on the left hand side of vscode 
   2. In the upper left search bar, type 'Remote SSH'
   3. Click 'install'
 
-**Step 3.** Use VScode to establish a connection with RON HPC (High Performance Computing) server through vscode [see here](https://code.visualstudio.com/docs/remote/ssh). Note: If you have problems with this step, still proceed to step 4.
+**Step 3.Use VScode to establish a connection with RON HPC (High Performance Computing) server through vscode [see here](https://code.visualstudio.com/docs/remote/ssh).** 
+Note: If you have problems with this step, still proceed to step 4.
 ### How to set up remote-ssh so that you can connect to RON  
   1. Open the vscode 'command palette' by pressing 'CMD + Shift + P'. A little bar at the top of the screen should pop up. Begin to type 'Remote-SSH: Add New SSH Host...'. Before you get too far, you should see the option pop-up. Click it. If you are asked what the host operating system is, click **LINUX**
   2. **Enter your username and password when prompted.** The username is the students id.
