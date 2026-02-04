@@ -137,76 +137,24 @@ If you've done everything above correctly, new documents and changes should be t
 
 Best practice is to use different authentication keys for different machines (e.g., work laptop vs. personal laptop). If one machine is compromised, you can revoke access for that specific key without affecting others. Go through this process again if you have another computer to work from.
 
+### Updating your copy of 'gen711-811' each week. (Will do as a class prior to lab 3)
+If you forked gen711-811, the easiest method to get the updates each week is to log in to your GitHub in a browser, navigate to your copy of the 'gen711-811' repo. If there are updates to be had, you should see 'update fork' button.  This will bring the new files/changes to your GitHub repo, but not to your 'remote repo' of gen711-811 on RON. To pull the updates to your RON remote repo, open VScode, connect to RON (as above). Once you've connected to RON, go to 'File --> Open Folder'. Scroll down to and click 'gen711-811'. Click the bubble fork on the left. Near the 'Changes' meun, you should see '...'. If you click on it, you should see a 'fetch' option. Let me know if you see an error as a result. 
 
 
-
-## Beyond this is optional for today.
-
-### Updating your copy of 'gen711-811' each week.
-If you forked gen711-811, the easiest method to get the updates each week is to log in to your GitHub in a browser, navigate to your copy of the 'gen711-811' repo. If there are updates to be had, you should see 'update fork' button.  This will bring the new files/changes to your GitHub repo, but not to your 'remote repo' of gen711-811 on RON. To pull the updates to your RON remote repo, open VScode, connect to RON (as above). Once you've connected to RON, go to 'File --> Open Folder'. Scroll down to and click 'gen711-811'. 
-
+### Generate ssh-keys to log into RON from VScode without usernames and passwords (Will do as a class prior to lab 3)
+### Do this if you'd preffer not to type your username and password each time you log into RON. 
+The process is much like the process for generating ssh keys for the connection between RON and GitHub
+First, open 'terminal' on your mac. We are going to use the terminal to generate the keys and restrict the permissions on the private key file. 
 
 
-To get new course files added to your repository later, you will need to add the original repository (the one you forked) as a 'remote' [see here for help](https://stackoverflow.com/questions/3903817/pull-new-updates-from-original-github-repository-into-forked-github-repository),[and here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)  
-To add updates/new files from the gen711-811 repo, copy and paste these lines into terminal on RON:
-```
-cd $HOME/gen711-811
-git remote add upstream https://github.com/jthmiller/gen711-811.git
-git fetch upstream
-git merge upstream/master master
-```
-The first line is to get you back to your home directory just in case you switched. 
-The second is to go looking for any changes that I might have made in my copy of 'gen711-811'
-The third is to get any of those changes
-The fourth is to merge my changes 'upstream/master' with your 'master'
-
-Note, git merge is like "git pull" which is fetch + merge. Or, better, you can replay your local work on top of the fetched branch like a "git pull --rebase"
-```
-git rebase upstream/master
-```
-
-
-
-1. Ensure all your local changes are committed to your current branch.
-- Save all your vscode additions, and commit them. 
-2. Fetch the latest updates from the remote:
-```git fetch origin```
-3. Rebase your changes onto the updated remote branch
-```git rebase origin/main```
-4. Resolve any conflicts: If conflicts arise during the rebase, Git will pause the process and prompt you to resolve them. After editing the files to resolve the conflicts, use:
-```
-git add .
-git rebase --continue
-```
-#### Resolving Conflicts
-In both scenarios, if the same lines of code were changed in both your local work and the remote updates, Git will indicate a conflict. You must manually edit the conflicted files to choose which changes to keep. Your editor will show markers (like <<<<<<< and >>>>>>>) to help you identify the conflicting sections. 
-After resolving the conflicts, add the file(s) and continue the operation as described above. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Optional: Generate ssh-keys to log into RON without usernames and passwords**  
-
-### This will really speed things up for you. Ask the instructor before proceeding to this step
-First, open 'terminal' on your mac. We are going to use the terminal to generate the keys and restrict the permissions on the private key file. For macOS / Linux, run the following shell command, replacing the path to your private key if necessary:
+ <details><summary>For Mac and Linux</summary> 
+1. run the following shell command, replacing the path to your private key if necessary:
 ```
 cd ~/.ssh
 ssh-keygen -t ed25519 -b 4096
 chmod 400 ~/.ssh/id_ed25519
 ```
 <br>
-
 - Next, share the public key with the Ron server
 ```
 ssh-copy-id USERNAME@ron.sr.unh.edu
