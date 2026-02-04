@@ -171,15 +171,51 @@ cat ~/.ssh/id_rsa.pub | ssh user@12.34.56.78 "mkdir -p ~/.ssh && cat >> ~/.ssh/a
 </details> <!-- end for mac-->
 <br>
 <details><summary>For Windows</summary> 
-**For Windows**, run the following command in PowerShell to grant explicit read access to your username:
+
+Open PowerShell by searching for it in the Start menu.
+
+Type ssh and press Enter. If you see usage information, the client is installed. If not, you may need to install it via Windows "Optional features" in Settings. 
+
+In the PowerShell window, run the following command to generate a new, secure Ed25519 key pair, replacing "your_email@example.com" with your email address for identification: 
+
+```
+sh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Run the following command in PowerShell to grant explicit read access to your username:
 
 ```
 icacls "privateKeyPath" /grant :R
 ```
 
-Then navigate to the private key file in Windows Explorer, right-click and select Properties. Select the Security tab → Advanced → Disable inheritance → Remove all inherited permissions from this object.
+Enter file in which to save the key: Press Enter to accept the default location (C:\Users\your_username\.ssh\id_ed25519).
+
+Enter passphrase (empty for no passphrase): It is recommended to enter a secure passphrase for an extra layer of security. You will be prompted to enter it again to confirm. If you prefer to use the key without a password prompt, press Enter twice to leave it empty. 
+
+Start the ssh-agent service. In powershell, type:
+
+```
+Start-Service ssh-agent
+```
+
+Set the service to start automatically on startup (optional but recommended):
+
+```
+Set-Service -Name ssh-agent -StartupType 'Automatic'
+```
+
+Add your private key to the ssh-agent:
+
+```
+ssh-add ~/.ssh/id_ed25519 USERNAME@ron.sr.unh.edu
+```
+
+Test your ssh connection
+
+```
+ssh username@RON.sr.unh.edu
+```
 
 </details> <!-- end for Windows-->
 
-Test the connection by connecting to RON
 
