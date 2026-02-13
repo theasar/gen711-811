@@ -58,5 +58,4 @@ Start with the letter o ____
 Contain the letter ‘a’ or the letter ‘c’ ____
 
 #### Find the line number in your history for the command that listed all the .fastq files using the absolute path. Paste the command that you used to do this below.
-1.
 Note from Thea: I was a little distracted with trying to figure out how to sync last lab that I got lost with the last few questions but once I figure it out I'll sync everything up again! 
