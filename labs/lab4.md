@@ -1,13 +1,36 @@
 
-Navigate to your untrimmed_fastq directory in one line
 
-### Exercise
+
+
+### EXERCISE
+Navigate to your untrimmed_fastq directory in one command
+
+### EXERCISE
+What would the output look like if the wildcard could *not* be matched? Compare the outputs
+
+### EXERCISE
+NAVIGATING PRACTICE
+Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
+
+
+### EXERCISE 3: FINDING HIDDEN DIRECTORIES
+First navigate to the shell_data directory. There is a hidden directory within this directory. Explore the options for ls to find out how to see hidden directories. List the contents of the directory and identify the name of the text file in that directory.
+
+Hint: hidden files and folders in Unix start with ., for example .my_hidden_directory
+
+
+
+### EXERCISE
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
 
 ### EXERCISE
 Print out the contents of the ~/shell_data/untrimmed_fastq/SRR097977.fastq file. What is the last line of the file?
+
+### EXERCISE
 From your home directory, and without changing directories, use one short command to print the contents of all of the files in the ~/shell_data/untrimmed_fastq directory.
 
+### EXERCISE
+What are the next three nucleotides (characters) after the first instance of the sequence quoted above?
 
 
 
@@ -29,33 +52,12 @@ indicates that you have permission to write to (i.e. make changes to) the file, 
 don't have permission to carry out the ability encoded by that space (this is the space where `x` or executable ability is stored, we'll
 talk more about this later.
 
+### EXERCISE
+Starting in the shell_data/untrimmed_fastq/ directory, do the following:
 
-## Exercises
-
-`echo` is a built-in shell command that writes its arguments, like a line of text to standard output.
-The `echo` command can also be used with pattern matching characters, such as wildcard characters.
-Here we will use the `echo` command to see how the wildcard character is interpreted by the shell.
-
-```bash
-$ echo *.fastq
-```
-
-```output
-SRR097977.fastq SRR098026.fastq
-```
-
-The `*` is expanded to include any file that ends with `.fastq`. We can see that the output of
-`echo *.fastq` is the same as that of `ls *.fastq`.
-
-What would the output look like if the wildcard could *not* be matched? Compare the outputs of
-`echo *.missing` and `ls *.missing`.
+Make sure that you have deleted your backup directory and all files it contains.
+Create a backup of each of your FASTQ files using cp. (Note: You’ll need to do this individually for each of the two FASTQ files. We haven’t learned yet how to do this with a wildcard.)
+Use a wildcard to move all of your backup files to a new backup directory.
+Change the permissions on all of your backup files to be write-protected.
 
 
-
-NAVIGATING PRACTICE
-Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
-
-FINDING HIDDEN DIRECTORIES
-First navigate to the shell_data directory. There is a hidden directory within this directory. Explore the options for ls to find out how to see hidden directories. List the contents of the directory and identify the name of the text file in that directory.
-
-Hint: hidden files and folders in Unix start with ., for example .my_hidden_directory
