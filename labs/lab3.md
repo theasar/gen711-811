@@ -39,9 +39,10 @@ git rebase --continue
 ## Lab Exercises (put these answers into your lab notebooks)
 
 #### 3a  "3 ways to change directories to HOME from untrimmed_fastq"
-1.
-2.
-3.
+1. cd $HOME
+2. cd ~
+3. cd ../../../
+4. cd /home/users/tss1045/
 
 #### 3b. How many programs in /bin 
 1. Do each of the following tasks from your current directory using a single ls command for each:
@@ -51,9 +52,11 @@ git rebase --continue
     - Bonus: List all of the files in /Applications that contain the letter ‘a’ or the letter ‘c’.
 
 Start with the letter c ____
+ls /bin/ | grep '^c' | wc -l 
 Start with the letter a ____
 Start with the letter o ____
 Contain the letter ‘a’ or the letter ‘c’ ____
 
 #### Find the line number in your history for the command that listed all the .fastq files using the absolute path. Paste the command that you used to do this below.
 1.
+Note from Thea: I was a little distracted with trying to figure out how to sync last lab that I got lost with the last few questions but once I figure it out I'll sync everything up again! 
