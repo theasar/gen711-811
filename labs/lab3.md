@@ -47,15 +47,18 @@ git rebase --continue
 #### 2. How many programs in /bin 
 2. Do each of the following tasks from your current directory using a single ls command for each:
     - List all of the files in /bin that start with the letter ‘c’.
-    ls safdasfsla
     - List all of the files in /bin that contain the letter ‘a’.
     - List all of the files in /bin that end with the letter ‘o’.
     - Bonus: List all of the files in /bin that contain the letter ‘a’ or the letter ‘c’.
 
 Start with the letter c ____
+ ls /bin | grep '^a'
 Start with the letter a ____
+ls /bin | grep 'a'
 Start with the letter o ____
+ls /bin | grep 'o'ls
 Contain the letter ‘a’ or the letter ‘c’ ____
-
+ls /bin | grep 'a.*c'
 #### Find the line number in your history for the command that listed all the .fastq files using the absolute path. Paste the command that you used to do this below.
-1.
+1.cd/home/users/tss1045/untrimmed_fastq/ 
+ls
