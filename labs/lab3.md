@@ -40,9 +40,9 @@ git rebase --continue
 ## Lab Exercises (put these answers into your lab notebooks)
 
 #### 3a  "3 ways to change directories to HOME from untrimmed_fastq"
-1.
-2.
-3.
+1. cd ../../../
+2. cd $
+3. cd /home/users/tss1045/
 
 #### 2. How many programs in /bin 
 2. Do each of the following tasks from your current directory using a single ls command for each:
