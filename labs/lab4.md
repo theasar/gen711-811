@@ -28,9 +28,11 @@ cd gen711-811/shell_data/untrimmedfastq/
 ### EXERCISE 2: WILDCARDS
 What would the output look like if the wildcard could *not* be matched? Compare the outputs
 
+ls *fq
+
 ### EXERCISE 3: NAVIGATING PRACTICE
 Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
-ls gen711-811/shell_data/untrimmed_fastq/
+
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -66,7 +68,7 @@ First navigate to the shell_data directory. There is a hidden directory within t
 Hint: hidden files and folders in Unix start with ., for example .my_hidden_directory
 
 What is the hidden file name in the hidden directory?
-youfoundit.txt
+
 ### EXERCISE 5: HISTORY
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
 
@@ -76,7 +78,7 @@ Print out the contents of the ~/shell_data/untrimmed_fastq/SRR097977.fastq file.
 ### EXERCISE 7: PATHS
 From your home directory, and without changing directories, use one short command to print the contents of all of the files in the ~/shell_data/untrimmed_fastq directory.
 
-### EXERCISE 8: LESS
+### EXERCISE 8: LESS (Sequence = TTTTTq)
 What are the next three nucleotides (characters) after the first instance of the sequence quoted above?
 
 ### File Permissions Help
@@ -113,7 +115,3 @@ After loading a conda environment, where is the program 'fastqc' stored?
 - The `history` command and the up arrow on your keyboard can be used to repeat recently used commands.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-Notes:
-What happens when "no such file or directory" - make sure to check spelling
-
-Hidden Directories, use "ls -a"
